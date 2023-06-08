@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Nom de la librairie",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        }
+      }
+    },
+    "required": ["name"],
+    "additionalProperties": false
+}
