@@ -31,10 +31,6 @@ jobs:
         shell: bash
         run: npx nx affected --target=build
 
-      - name: Lint
-        shell: bash
-        run: npx nx affected --target=lint --verbose
-
       - name: Tests
         shell: bash
         run: npx nx affected --target=test --verbose

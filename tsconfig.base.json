@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@antoinelncl/test-c": ["packages/test-c/src/index.ts"],
       "@antoinelncl/test-lib": ["packages/test-lib/src/index.ts"]
     }
   },
