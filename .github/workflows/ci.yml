@@ -25,16 +25,16 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Install packages dependencies
-        run: npx nx affected --base=last-release --target=install
+        run: npx nx affected --target=install
 
       - name: Build
         shell: bash
-        run: npx nx affected --base=last-release --target=build
+        run: npx nx affected --target=build
 
       - name: Lint
         shell: bash
-        run: npx nx affected --base=last-release --target=lint --verbose
+        run: npx nx affected --target=lint --verbose
 
       - name: Tests
         shell: bash
-        run: npx nx affected --base=last-release --target=test --verbose
+        run: npx nx affected --target=test --verbose
