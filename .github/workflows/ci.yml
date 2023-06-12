@@ -23,8 +23,8 @@ jobs:
       - name: OKLOL
         run: |
          echo ${{ contains(github.event.pull_request.head_commit.message, 'review-release') }}
-          echo ${{ github.event.pull_request }}
-          echo ${{ github.event.pull_request.commits[0] }}
+          echo ${{ toJson(github.event.pull_request) }}
+          echo ${{ toJson(github.event.pull_request.commits) }}
 
       - name: Setup npm
         run: |
