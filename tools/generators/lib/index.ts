@@ -75,7 +75,7 @@ export default async function (tree: Tree, options: CustomLibSchema) {
           skipProjectChangelog: true,
           noVerify: false,
           releaseAs: "prerelease",
-          preId: "alpha",
+          preid: "alpha",
           postTargets: [`${name}:npm`, `${name}:github`],
         },
       },
