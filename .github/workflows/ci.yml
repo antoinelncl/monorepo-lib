@@ -20,6 +20,11 @@ jobs:
           git config --global user.name 'antoinelncl'
           git config --global user.email 'lancial.antoine@gmail.com'
 
+      - name: OKLOL
+        run: |
+          echo ${{ github.event.pull_request.head_commit.message }}
+          echo ${{ github.event.pull_request.commits }}
+
       - name: Setup npm
         run: |
             npm config set "//npm.pkg.github.com/:_authToken" "${NODE_AUTH_TOKEN}"
