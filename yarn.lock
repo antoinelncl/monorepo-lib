@@ -1815,7 +1815,7 @@
     tree-kill "1.2.2"
     tslib "^2.3.0"
 
-"@nrwl/js@15.9.4":
+"@nrwl/js@^15.8.9":
   version "15.9.4"
   resolved "https://registry.yarnpkg.com/@nrwl/js/-/js-15.9.4.tgz#3256955e3fe21b999b4f5ae8ba722579fc9b4386"
   integrity sha512-DMJ7qFf/nN5w1WZyxm9JaAPsdfAD+bjLJ8MKA6rtoHcMB3t/BtCZ8lsnsYRUJXFGwuY6aj71bQXQ6F+QQOJY4Q==
