@@ -15,7 +15,7 @@ jobs:
           node-version: '16'
 
       - name: Setup git
-        if: contains(github.event.head_commit.message, 'review-release')
+        if: contains(github.event.pull_request.head_commit.message, 'review-release')
         run: |
           git config --global user.name 'antoinelncl'
           git config --global user.email 'lancial.antoine@gmail.com'
@@ -42,7 +42,7 @@ jobs:
         run: npx nx affected --base=last-release --target=test --verbose
 
       - name: Publish Alpha
-        if: contains(github.event.head_commit.message, 'review-release')
+        if: contains(github.event.pull_request.head_commit.message, 'review-release')
         shell: bash
         run: npx nx affected --base=alpha --target=alphaVersion --verbose
         env:
