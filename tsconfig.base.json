@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@antoinelncl/lib-f": ["packages/lib-f/src/index.ts"],
+      "@antoinelncl/lib-g": ["packages/lib-g/src/index.ts"],
       "@antoinelncl/test-lib": ["packages/test-lib/src/index.ts"]
     }
   },
