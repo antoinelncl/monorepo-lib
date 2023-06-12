@@ -37,7 +37,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "baseBranch": "master",
+        "baseBranch": "main",
         "push": true,
         "noVerify": false,
         "postTargets": ["lib-d:npm", "lib-d:github"]
@@ -46,9 +46,8 @@
     "alphaVersion": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "dryRun": true,
-        "noVerify": true,
-        "skipCommit": true,
+        "push": true,
+        "noVerify": false,
         "skipProjectChangelog": true,
         "releaseAs": "prerelease",
         "preId": "alpha",
