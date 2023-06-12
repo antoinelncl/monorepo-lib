@@ -62,7 +62,7 @@ export default async function (tree: Tree, options: CustomLibSchema) {
       version: {
         executor: "@jscutlery/semver:version",
         options: {
-          baseBranch: "master",
+          baseBranch: "main",
           push: true,
           noVerify: false,
           postTargets: [`${name}:npm`, `${name}:github`],
