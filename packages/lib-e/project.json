@@ -1,0 +1,72 @@
+{
+  "name": "lib-e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/lib-e",
+        "main": "packages/lib-e/src/index.ts",
+        "tsConfig": "packages/lib-e/tsconfig.lib.json",
+        "assets": ["packages/lib-e/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/lib-e/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/lib-e/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "baseBranch": "master",
+        "push": true,
+        "noVerify": false,
+        "postTargets": ["lib-e:npm", "lib-e:github"]
+      }
+    },
+    "alphaVersion": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "push": true,
+        "skipProjectChangelog": true,
+        "noVerify": false,
+        "releaseAs": "prerelease",
+        "preId": "alpha",
+        "postTargets": ["lib-e:npm", "lib-e:github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "root": "packages/lib-e"
+}
