@@ -71,9 +71,11 @@ export default async function (tree: Tree, options: CustomLibSchema) {
       alphaVersion: {
         executor: "@jscutlery/semver:version",
         options: {
+          push: true,
+          skipProjectChangelog: true,
           noVerify: false,
           releaseAs: "prerelease",
-          preid: "alpha",
+          preId: "alpha",
           postTargets: [`${name}:npm`, `${name}:github`],
         },
       },
