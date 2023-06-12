@@ -22,8 +22,8 @@ jobs:
 
       - name: OKLOL
         run: |
-          echo ${{ github.event.pull_request.head_commit.message }}
-          echo ${{ github.event.pull_request.commits }}
+          echo ${{ github.event.commits[0].message }}
+          echo ${{ github.event.pull_request.commits[0].message }}
 
       - name: Setup npm
         run: |
