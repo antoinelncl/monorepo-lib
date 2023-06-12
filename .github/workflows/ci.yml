@@ -30,9 +30,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Install packages dependencies
-        run: npx nx affected --target=install
-
       - name: Build
         shell: bash
         run: npx nx affected --target=build --verbose
