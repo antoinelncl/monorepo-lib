@@ -29,7 +29,7 @@ jobs:
 
       - name: Build
         shell: bash
-        run: npx nx affected --target=build
+        run: npx nx affected --target=build --verbose
 
       - name: Tests
         shell: bash
