@@ -14,6 +14,11 @@ jobs:
           cache: 'yarn'
           node-version: '16'
 
+      - name: Setup git
+        run: |
+          git config --global user.name 'antoinelncl'
+          git config --global user.email 'lancial.antoine@gmail.com'
+
       - name: Setup npm
         run: |
             npm config set "//npm.pkg.github.com/:_authToken" "${NODE_AUTH_TOKEN}"
