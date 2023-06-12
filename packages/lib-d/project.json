@@ -46,7 +46,10 @@
     "alphaVersion": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "noVerify": false,
+        "dryRun": true,
+        "noVerify": true,
+        "skipCommit": true,
+        "skipProjectChangelog": true,
         "releaseAs": "prerelease",
         "preId": "alpha",
         "postTargets": ["lib-d:npm", "lib-d:github"]
