@@ -50,7 +50,7 @@
         "skipProjectChangelog": true,
         "noVerify": false,
         "releaseAs": "prerelease",
-        "preId": "alpha",
+        "preid": "alpha",
         "postTargets": ["lib-e:npm", "lib-e:github"]
       }
     },
