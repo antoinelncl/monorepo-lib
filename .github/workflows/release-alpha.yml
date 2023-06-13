@@ -35,19 +35,19 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Install packages dependencies
-        run: npx nx affected --base=alpha --target=install
+        run: npx nx affected --target=install
 
       - name: Build
         shell: bash
-        run: npx nx affected --base=alpha --target=build --verbose
+        run: npx nx affected --target=build --verbose
 
       - name: Tests
         shell: bash
-        run: npx nx affected --base=alpha --target=test --verbose
+        run: npx nx affected --target=test --verbose
 
       - name: Publish Alpha
         shell: bash
-        run: npx nx affected --base=alpha --target=alphaVersion --verbose
+        run: npx nx affected --target=alphaVersion --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
