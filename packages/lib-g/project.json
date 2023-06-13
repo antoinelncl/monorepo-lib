@@ -46,7 +46,7 @@
     "alphaVersion": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "skipCommit": true,
+        "push": true,
         "skipProjectChangelog": true,
         "noVerify": false,
         "releaseAs": "prerelease",
