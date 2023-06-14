@@ -48,7 +48,7 @@
       "options": {
         "push": true,
         "skipProjectChangelog": true,
-        "noVerify": false,
+        "noVerify": true,
         "releaseAs": "prerelease",
         "preid": "alpha",
         "postTargets": ["lib-g:npm", "lib-g:github"]
