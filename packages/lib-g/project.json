@@ -46,7 +46,7 @@
     "alphaVersion": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "baseBranch": "${{ env.BASE_BRANCH }}",
+        "baseBranch": "${env.BASE_BRANCH}",
         "push": true,
         "skipProjectChangelog": true,
         "noVerify": false,
