@@ -46,9 +46,10 @@
     "alphaVersion": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "baseBranch": "${{ env.BASE_BRANCH }}",
         "push": true,
         "skipProjectChangelog": true,
-        "noVerify": true,
+        "noVerify": false,
         "releaseAs": "prerelease",
         "preid": "alpha",
         "postTargets": ["lib-g:npm", "lib-g:github"]
